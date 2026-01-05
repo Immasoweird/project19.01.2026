@@ -1,0 +1,76 @@
+.clients__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(30, 14, 98, 1);
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 470px);
+    grid-template-rows: repeat(2, 237px);
+
+    gap: 30px;
+}
+
+.clients .section__title{
+    align-self: start;
+    color: white;
+
+
+}
+
+.card-image {
+    width: 70px;
+    height: 70px;
+}
+
+.client-card {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .15);
+
+    color: white;
+    padding: 35px 28px 23px 35px;
+
+    display: flex;
+    gap: 30px;
+
+    transform-style: preserve-3d
+}
+
+.card__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 179px;
+    justify-content: space-between;
+}
+
+.card__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+
+    width: 275px;
+}
+
+
+.card__name {
+    color: rgba(255, 255, 255, .3);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}

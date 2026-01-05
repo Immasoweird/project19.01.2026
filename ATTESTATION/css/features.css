@@ -1,0 +1,111 @@
+/*FEATURES*/
+
+.features {
+    min-height: 100vh;
+
+    background-image: url("../img/features/Rectangle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    color: white;
+
+    position: relative;
+}
+
+
+.features-wrapper {
+    display: flex;
+    gap: 28px;
+}
+
+.features__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 271px;
+    max-height: 186px;
+}
+
+.box__title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 26px;
+
+    width: 585px;
+}
+
+.box__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.box__icon:nth-child(1) {
+    width: 38px;
+    height: 38px;
+}
+
+.box__icon:nth-child(2) {
+    width: 44px;
+    height: 38px;
+}
+
+.features::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/features/Mockup.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    top: 230px;
+    left: 0;
+
+    width: 482px;
+    height: 535px;
+}
+
+/*DOTS*/
+
+
+.features  .slider-dots {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 10px;
+
+    transition: all 0.3s ease;
+
+    position: absolute;
+    top: 435px;
+    right: 100px;
+}
+
+
+.features .dot:hover {
+    transform: scale(1.5);
+}
+
+.features .dot {
+    cursor: pointer;
+    border-radius: 50%;
+    color: transparent;
+    border: 2px solid white;
+    width: 14px;
+    height: 14px;
+    opacity: .7;
+
+    transition: transform .3s ease;
+}
+
+.features .dot.active {
+    background-color: white;
+}
+
+.features .section__content {
+    margin-left: 635px;
+}

@@ -1,0 +1,53 @@
+.callAction .section__content{
+    text-align: center;
+
+    margin: 235px 0 60px 0;
+}
+
+.callAction {
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/callAction/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .section__title {
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 70px;
+        letter-spacing: -1px;
+    }
+    .section__text {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+}
+
+#btn__callAct1{
+    border-radius: 50%;
+    background-color: rgba(234, 50, 35, 1);
+    width: 70px;
+    height: 70px;
+    padding: 25px;
+
+}
+
+#btn__callAct2 {
+    border-radius: 100px;
+    background-color: rgba(37, 218, 197, 1);
+    padding: 22px 51px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    width: 213px;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-self: center;
+    gap: 30px;
+    color: white;
+
+}

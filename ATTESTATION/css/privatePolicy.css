@@ -1,0 +1,110 @@
+/* Main container */
+.accordion-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.accordion {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms ease;
+    backdrop-filter: blur(5px);
+}
+
+.accordion-header:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.accordion-item.active .accordion-header {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    transition: max-height 300ms ease;
+}
+
+.accordion-content-inner {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.privacy-title {
+    color: #fff;
+    margin: 0 0 15px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.last-updated {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 30px;
+    display: block;
+}
+
+.accordion-content ul {
+    margin: 15px 0;
+    padding: 0 0 0 20px;
+}
+
+.accordion-content li {
+    margin: 0 0 10px;
+}
+
+.accordion-content a {
+    color: #9c7cff;
+    text-decoration: none;
+    transition: color 200ms ease, text-decoration 200ms ease;
+}
+
+.accordion-content a:hover {
+    color: #b79cff;
+    text-decoration: underline;
+}
+
+.accordion-content a[href^="mailto:"] {
+    color: #c792ea;
+}
+
+.accordion-content a[href^="mailto:"]:hover {
+    color: #e2bfff;
+}
+
+.accordion-content p {
+    padding: 10px 0;
+}

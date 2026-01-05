@@ -1,0 +1,320 @@
+.pricing {
+    background-image: url("../img/pricing/Background.png");
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pricing__container {
+    margin-top: 120px;
+    align-self: center;
+}
+
+.pricing .section__title {
+    text-align: center;
+}
+
+.pricing .section__text {
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.pricing__card {
+    color: white;
+    text-align: start;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 64px 70px 56px;
+    transform: scale(0.95);
+    transition: all .3s ease;
+}
+
+.pricing__card:hover {
+    transform: scale(1);
+
+    box-shadow: 0 0 30px 5px rgba(255, 255, 255, .15);
+}
+
+
+.pricing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: 730px;
+    gap: 30px;
+}
+
+.pricing__card-name {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+
+    margin-bottom: 22px;
+}
+
+.pricing__card-price {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: -1px;
+
+
+    position: relative;
+}
+
+.pricing__card-price::after {
+    content: "$";
+    position: absolute;
+    top: -5px;
+    right: 70px;
+    width: 10px;
+    height: 26px;
+
+    font-size: 24px;
+    font-weight: 14;
+    line-height: 26px;
+}
+
+#price1::after {
+    top: -5px;
+    right: 100px;
+}
+
+.pricing__card-point {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    opacity: .7;
+}
+
+.pricing__points-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.pricing button {
+    border: 2px solid rgba(255, 255, 255, .3);
+    background-color: transparent;
+    color: white;
+    width: 230px;
+    height: 60px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 20px;
+
+    transition: all .3s ease;
+}
+
+.pricing button:hover {
+    transform: translateY(-2px) scale(1.03);
+    border: rgb(72 43 231) 2px solid;
+    box-shadow: 0 0 10px 5px rgba(155, 137, 241, 0.7);
+
+    background-color: rgba(233, 58, 125, .6);
+    backdrop-filter: blur(10px);
+}
+
+.pricing button:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.pricing button:focus {
+    background-color: rgba(233, 58, 125, .6);
+    backdrop-filter: blur(10px);
+}
+
+
+.pricing__card-point.active {
+    opacity: 1;
+    position: relative;
+}
+
+.pricing__card-point.active::before {
+    content: url("../img/pricing/Check Icon.svg");
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 12px;
+    height: 8px;
+}
+
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.1);
+        opacity: .8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+    animation: openModal 0.3s ease;
+}
+
+.modal.closing {
+    animation: closeModal 0.3s ease;
+}
+
+@keyframes closeModal {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+@keyframes openModal {
+    from {
+        transform: scale(1.1);
+        opacity: .8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal__content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+.modal__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    padding: 24px;
+    line-height: 1;
+}
+
+.modal__close:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.modal__title {
+    margin: 0 0 32px 0;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* MODAL FORM */
+.form__group {
+    margin-bottom: 24px;
+}
+
+.form__group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+select.form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+
+.form__input,
+.form__select {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form__input:focus,
+.form__select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.form__submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form__submit:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form__submit:active {
+    transform: translateY(0);
+}
+

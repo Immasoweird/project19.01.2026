@@ -1,0 +1,83 @@
+.terms-container {
+    max-width: 800px;
+    margin: 16px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.terms-title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+.terms-last-updated {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 30px;
+    display: block;
+}
+
+.terms-content {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.terms-content h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terms-content h4 {
+    color: #9c7cff;
+    font-size: 18px;
+    margin: 25px 0 15px;
+}
+
+.terms-content p {
+    margin: 0 0 15px;
+    line-height: 1.7;
+}
+
+.terms-content ul {
+    margin: 15px 0;
+    padding: 0 0 0 20px;
+}
+
+.terms-content li {
+    margin: 0 0 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.terms-content li:before {
+    content: "•";
+    color: #4facfe;
+    position: absolute;
+    left: 0;
+}
+
+.terms-content a {
+    color: #9c7cff;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.terms-content a:hover {
+    color: #b79cff;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,47 @@
+.team .section__content {
+    margin: 0 0 70px 0;
+    max-width: 755px;
+}
+
+.team .section__text {
+    margin: 0;
+}
+
+.team__container {
+    transform: translateY(100px);
+    margin-left: 115px;
+    color: white;
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
+    grid-template-rows: repeat(2, 241px);
+
+    row-gap: 60px;
+    column-gap: 110px;
+}
+
+.member__img {
+    margin-bottom: 17px;
+}
+
+.member__name {
+    margin-bottom: 8px;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.member__role {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.member__socials {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}

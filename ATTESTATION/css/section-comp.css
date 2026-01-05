@@ -1,0 +1,45 @@
+.section__content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    max-width: 600px;
+    max-height: 420px;
+
+}
+
+.section__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.section__text {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    color: white;
+
+    margin-bottom: 75px;
+}
+
+
+.section__left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 369px;
+    max-height: 318px;
+}
+
+.section__right-side {
+    background-color: white;
+    width: 470px;
+    height: 570px;
+    border-radius: 10px;
+    text-align: center;
+}

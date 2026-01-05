@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container header__container">
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item" id="nav__item1"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item" id="nav__item2"><a href="features.html" class="nav__link">Features</a></li>
+                <li class="nav__item" id="nav__item3"><a href="pricing.html" class="nav__link">Pricing</a></li>
+                <li class="nav__item" id="nav__item4"><a href="clients.html" class="nav__link">Blog</a></li>
+                <li class="nav__item"><a href="https://dribbble.com/" class="nav__link"><img src="../img/index/nav/fa-dribbble.svg"
+                                                                                             alt=""></a>
+                </li>
+                <li class="nav__item"><a href="https://behance.com" class="nav__link"><img src="../img/index/nav/fa-behance.svg"
+                                                                                           alt=""></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="pricing">
+    <div class="container pricing__container">
+        <h2 class="section__title">Plans & Pricing</h2>
+        <p class="section__text">Startup Framework is free forever — you only pay for <br> custom domain hosting or to
+            export your site.</p>
+        <div class="pricing__grid">
+            <div class="pricing__card">
+                <div class="pricing__card-wrapper">
+                    <div class="pricing__points-wrapper">
+                        <h3 class="pricing__card-name">Starter</h3>
+                        <span class="pricing__card-price" id="price1">9.99</span>
+                        <p class="pricing__card-point active">2 GB of space</p>
+                        <p class="pricing__card-point active">14 days of backups</p>
+                        <p class="pricing__card-point active">Social integrations</p>
+                        <p class="pricing__card-point active">Client billing</p>
+                        <p class="pricing__card-point">Remote access</p>
+                        <p class="pricing__card-point">Custom domain</p>
+                        <p class="pricing__card-point">24 hours support</p>
+                        <p class="pricing__card-point">Admin tools</p>
+                        <p class="pricing__card-point">Collaboration tools</p>
+                        <p class="pricing__card-point">User management</p>
+                    </div>
+                    <button class="btn__pricing">Get Started</button>
+                </div>
+            </div>
+            <div class="pricing__card">
+                <div class="pricing__card-wrapper">
+                    <div class="pricing__points-wrapper">
+                        <h3 class="pricing__card-name">Professional</h3>
+                        <span class="pricing__card-price">19.99</span>
+                        <p class="pricing__card-point active">2 GB of space</p>
+                        <p class="pricing__card-point active">14 days of backups</p>
+                        <p class="pricing__card-point active">Social integrations</p>
+                        <p class="pricing__card-point active">Client billing</p>
+                        <p class="pricing__card-point active">Remote access</p>
+                        <p class="pricing__card-point active">Custom domain</p>
+                        <p class="pricing__card-point active">24 hours support</p>
+                        <p class="pricing__card-point">Admin tools</p>
+                        <p class="pricing__card-point">Collaboration tools</p>
+                        <p class="pricing__card-point">User management</p>
+                    </div>
+                    <button class="btn__pricing">Get Started</button>
+                </div>
+            </div>
+            <div class="pricing__card">
+                <div class="pricing__card-wrapper">
+                    <div class="pricing__points-wrapper">
+                        <h3 class="pricing__card-name">Team</h3>
+                        <span class="pricing__card-price">49.99</span>
+                        <p class="pricing__card-point active">2 GB of space</p>
+                        <p class="pricing__card-point active">14 days of backups</p>
+                        <p class="pricing__card-point active">Social integrations</p>
+                        <p class="pricing__card-point active">Client billing</p>
+                        <p class="pricing__card-point active">Remote access</p>
+                        <p class="pricing__card-point active">Custom domain</p>
+                        <p class="pricing__card-point active">24 hours support</p>
+                        <p class="pricing__card-point active">Admin tools</p>
+                        <p class="pricing__card-point active">Collaboration tools</p>
+                        <p class="pricing__card-point active">User management</p>
+                    </div>
+                    <button class="btn__pricing">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- modal window -->
+<div class="modal" id="pricingModal">
+    <div class="modal__content">
+        <span class="modal__close">&times;</span>
+        <h2 class="modal__title">Choose plan</h2>
+        <form class="modal__form" id="pricingForm">
+            <div class="form__group">
+                <label for="plan">Plan:</label>
+                <select id="plan" name="plan" class="form__select" required>
+                    <option value="starter">Starter</option>
+                    <option value="professional">Professional</option>
+                    <option value="team">Team</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required class="form__input">
+            </div>
+            <div class="form__group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="form__input">
+            </div>
+            <div class="form__group">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" required class="form__input">
+            </div>
+            <button type="submit" class="form__submit">Send request</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

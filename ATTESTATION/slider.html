@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .slider {
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: red;
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="https://i.pinimg.com/736x/8c/84/40/8c8440bccf44c8fa87200a68f0427273.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/originals/8f/72/1f/8f721f2f3e82915b9333b343e29c1156.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="https://cs6.pikabu.ru/post_img/big/2015/06/08/3/1433735650_472905306.jpg" alt="Slide 3">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn">Назад</button>
+            <button id="nextBtn">Вперед</button>
+        </div>
+
+        <div class="dots" id="dotsContainer"></div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+
+        let currentSlide = 0;
+
+        function initDots() {
+            for (let i = 0; i < slides.length; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) {
+                    dot.classList.add('active');
+                }
+
+                dot.addEventListener('click', function () {
+                    goToSlide(i);
+                });
+
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function goToSlide(slideIndex) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+
+            const dots = document.querySelectorAll('.dot');
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('active');
+            }
+
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+
+            currentSlide = slideIndex;
+        }
+
+        function nextSlide() {
+            let nextIndex = currentSlide + 1;
+
+            if (nextIndex >= slides.length) {
+                nextIndex = 0;
+            }
+
+            goToSlide(nextIndex);
+        }
+
+        function prevSlide() {
+            let prevIndex = currentSlide - 1;
+
+            if (prevIndex < 0) {
+                prevIndex = slides.length - 1;
+            }
+
+            goToSlide(prevIndex);
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        function startAutoSlide() {
+            setInterval(nextSlide, 5000);
+        }
+
+        function initSlider() {
+            initDots();
+            startAutoSlide();
+        }
+
+        document.addEventListener('DOMContentLoaded', initSlider);
+    </script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>
